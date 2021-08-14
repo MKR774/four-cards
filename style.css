@@ -1,0 +1,99 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+body {
+  font-family: "Poppins", sans-serif;
+  font-size: 15px;
+  background-color: hsl(0, 0%, 98%);
+  color: hsl(234, 12%, 34%);
+}
+.container {
+  width: 1200px;
+  margin: 20px auto;
+}
+/* start text */
+.heading-siction {
+  width: 360px;
+  margin: 60px auto 50px;
+  text-align: center;
+}
+.heading-siction h1:first-of-type {
+  font-size: 23px;
+  font-weight: 200;
+}
+.heading-siction h1:last-of-type {
+  font-size: 24px;
+}
+.heading-siction p {
+  color: hsl(229, 6%, 66%);
+  font-size: 10px;
+  text-align: center;
+  margin-top: 15px;
+}
+/* end text */
+/* start cards */
+.cards-container {
+  margin: auto auto 40px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px;
+}
+.cards-container .card:nth-child(1){
+  border-top: 3px solid hsl(180, 62%, 55%);
+}
+.cards-container .card:nth-child(2){
+  border-top: 3px solid hsl(0, 78%, 62%);
+}
+.cards-container .card:nth-child(3){
+  border-top: 3px solid hsl(34, 97%, 64%);
+}
+.cards-container .card:nth-child(4){
+  border-top: 3px solid hsl(212, 86%, 64%);
+}
+@media (min-width: 768px ) {
+  .cards-container .card:nth-child(1),
+.cards-container .card:nth-child(3){
+  transform: translateY(50%);
+}
+}
+.cards-container .card {
+  flex-basis: calc(100% /4);
+  padding: 30px 30px ;
+  padding-bottom: 0;
+  box-shadow: -2px 2px 20px 0px hsl(229deg 6% 66% / 37%);
+  border-radius: 5px;
+  display: flex;
+  flex-wrap: wrap;
+}
+@media (max-width: 767px) {
+  .container {
+    width: 300px;
+  }
+.heading-siction {
+  width: fit-content;
+}
+  .cards-container .card {
+    flex-basis: calc(100% /1);
+  }
+}
+.cards-container .card .text h2 {
+  font-size: 15px;
+  padding-bottom: 15px;
+}
+.cards-container .card .text p {
+  font-size: 10px;
+  color: hsl(229, 6%, 66%);
+  line-height: 1.7;
+}
+.cards-container .card .img-container {
+  margin-left: auto;
+  width: 50px;
+  padding: 28px 0 20px;
+}
+.cards-container .card img {
+  width: 100% ;
+}
+/* end cards */

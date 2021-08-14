@@ -10,12 +10,11 @@ body {
   color: hsl(234, 12%, 34%);
 }
 .container {
-  width: 1200px;
-  margin: 20px auto;
+  margin: auto;
 }
 /* start text */
 .heading-siction {
-  width: 360px;
+  width: 335px;
   margin: 60px auto 50px;
   text-align: center;
 }
@@ -32,14 +31,41 @@ body {
   text-align: center;
   margin-top: 15px;
 }
+@media (max-width: 767px) {
+  .heading-siction p {
+    font-size: 14px;
+    width: 300px;
+    margin: 15px auto;
+  }
+}
 /* end text */
 /* start cards */
 .cards-container {
-  margin: auto auto 40px;
+  margin: auto auto 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+}
+@media (max-width: 767px) {
+  .cards-container {
+    flex-direction: column;
+  }
+}
+.cards-sub-container {
+  width: 290px;
   display: flex;
   flex-wrap: wrap;
-  justify-content: center;
   gap: 30px;
+}
+.cards-container .card {
+  flex-basis: 100%;
+  padding: 30px 30px ;
+  padding-bottom: 0;
+  box-shadow: -2px 2px 20px 0px hsl(229deg 6% 66% / 37%);
+  border-radius: 5px;
+  display: flex;
+  flex-wrap: wrap;
 }
 .cards-container .card:nth-child(1){
   border-top: 3px solid hsl(180, 62%, 55%);
@@ -52,32 +78,6 @@ body {
 }
 .cards-container .card:nth-child(4){
   border-top: 3px solid hsl(212, 86%, 64%);
-}
-@media (min-width: 768px ) {
-  .cards-container .card:nth-child(1),
-.cards-container .card:nth-child(3){
-  transform: translateY(50%);
-}
-}
-.cards-container .card {
-  flex-basis: calc(100% /4);
-  padding: 30px 30px ;
-  padding-bottom: 0;
-  box-shadow: -2px 2px 20px 0px hsl(229deg 6% 66% / 37%);
-  border-radius: 5px;
-  display: flex;
-  flex-wrap: wrap;
-}
-@media (max-width: 767px) {
-  .container {
-    width: 300px;
-  }
-.heading-siction {
-  width: fit-content;
-}
-  .cards-container .card {
-    flex-basis: calc(100% /1);
-  }
 }
 .cards-container .card .text h2 {
   font-size: 15px;
@@ -95,5 +95,12 @@ body {
 }
 .cards-container .card img {
   width: 100% ;
+}
+.attribution {
+  font-size: 11px;
+  text-align: center;
+}
+.attribution a {
+  color: hsl(228, 45%, 44%);
 }
 /* end cards */
